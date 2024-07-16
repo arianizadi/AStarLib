@@ -32,7 +32,6 @@ public:
       int neighbor_x = node.first + dir.first;
       int neighbor_y = node.second + dir.second;
 
-      // Check if the neighbor is within bounds and not blocked
       if(isValidLocation(neighbor_x, neighbor_y)
          && !isObstacle(neighbor_x, neighbor_y)) {
         neighbors.emplace_back(neighbor_x, neighbor_y);

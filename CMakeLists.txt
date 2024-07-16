@@ -7,6 +7,9 @@ project(AStarLib)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# Add pg flag for debugging
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pg -g")
+
 # Add include directories
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
@@ -18,6 +21,5 @@ target_include_directories(AStarLib PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 # Add the test executable
 add_executable(AStarTest test/test_main.cpp)
-
 # Link the test executable with the library
 target_link_libraries(AStarTest AStarLib)
